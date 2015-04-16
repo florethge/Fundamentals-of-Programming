@@ -1,0 +1,12 @@
+def fib (num):
+	z=0
+	if(num>1):
+		z= fib(num-1) + fib(num-2)
+		return (z)
+	elif(num==0 or num==1):
+		return (num)
+	else:
+		print("ivalid number")
+		
+num=int(input("Enter a number: "))
+print (fib(num))
