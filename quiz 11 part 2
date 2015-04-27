@@ -1,0 +1,17 @@
+
+#http://www.pythoncentral.io/how-to-see-if-a-string-contains-another-string-in-python/
+def bananas(p):
+    file_object= open (p,'r')
+    count=0
+    for line in file_object:
+        #lower case conversion
+        line= line.lower()
+        #print(line)
+        if(line.find('banana') != -1):
+            count=count+1
+    return(count)
+     
+print (bananas("fruit.txt"))
+ 
+ 
+#if('banana' in line):
