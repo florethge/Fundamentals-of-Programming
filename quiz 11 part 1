@@ -1,0 +1,63 @@
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+import math
+def read_numbers_file(p):
+    file_object= open (p,'r')
+    count=0
+    sum=0
+    stand_dev=0
+    counter=0
+    for line in file_object:
+        count=count+1
+        counter=count-1
+        #conversion
+        num_conversion= float(line)
+        #total of the values
+        sum=sum+num_conversion
+        #average of the values
+        average=sum/count
+        #standard deviation
+        stand_dev= stand_dev + ((num_conversion-average)**2)
+    division= math.sqrt(stand_dev/counter)
+ 
+         
+         
+    print(sum)
+    print(count)
+    print(average)
+    print(division)
+ 
+     
+     
+ 
+ 
+ 
+read_numbers_file ("random_numbers.dat.txt")
