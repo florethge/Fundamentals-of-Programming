@@ -1,0 +1,38 @@
+#http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python
+ 
+#open the file
+file_object = open("93cars.dat.txt", 'r')
+count=0
+sum_midrange=0
+sum_city_mpg=0
+sum_highway_mpg=0
+#read the file
+for line in file_object:
+    #print (line)
+    count = count+1
+#print(count)
+    if(count%2!=0):
+        #print (line)
+        #midrange str and conversion of float
+        midrange= line[42:46]
+        float_mid= float(midrange)
+        #city mpg str and conversion of float
+        city_mpg = line[52:54]
+        float_city_mpg= float(city_mpg)
+        #highway mpg str and conversion of float
+        highway_mpg= line[55:57]
+        float_highway_mpg= float(highway_mpg)
+        #average of midrange
+        sum_midrange= sum_midrange + float_mid
+        average_midrange= sum_midrange/(count/2)
+        #average of city mpg
+        sum_city_mpg= sum_city_mpg + float_city_mpg
+        average_city_mpg= sum_city_mpg/(count/2)
+        #average of highway mpg
+        sum_highway_mpg= sum_highway_mpg + float_highway_mpg
+        average_highway_mpg= sum_highway_mpg/(count/2)
+         
+         
+print("Average of the Midrange price of the Vehicles: ",str (average_midrange)[:5])
+print("Average of the City Mpg: ",str(average_city_mpg) [:5])
+print("Average of the Highway Mpg: ",str (average_highway_mpg)[:5])
